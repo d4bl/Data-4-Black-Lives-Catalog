@@ -7,7 +7,9 @@
         <span class="action">commented on a <%= link_to activity.trackable.commentable.class.to_s, activity.trackable.commentable %></span>
       </div>
       <div class="content">
-        <h4><small><%= activity.trackable.comment_html %></small></h4>
+        <% if activity.present? and activity.trackable.present? and activity.trackable.present? %>
+          <h4><small><%= activity.trackable.comment_html %></small></h4>
+        <% end %>
       </div>
       <%= render 'shared/created_at', activity: activity %>
     </div>

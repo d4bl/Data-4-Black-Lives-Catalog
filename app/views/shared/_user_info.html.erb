@@ -1,38 +1,41 @@
 <div id="user-info" class="well">
   <div class="text-center">
-    <%= render 'shared/avatar', user: @user %><br>
+    <%= image_tag @user.avatar.url || 'avatar.jpg', class: 'profile-avatar' %>
     <h5><%= link_to @user.name, @user %></h5>
   </div>
+
   <h5>
-    <%= fa_icon 'shield' %>
-    <%= pluralize(@user.posts_count, 'post') %>
+    <% if @user.about.present? %>
+      <%= @user.about %>
+    <% else %>
+      This person prefers to keep and air of mystery about them.
+    <% end %>
   </h5>
-  <% if @user.dob.present? %>
+
+  <% if @user.position.present? %>
     <h5>
-      <%= fa_icon @user.sex %>
-      <%= "#{pluralize(age(@user.dob), 'year')} old" %>
+      <%= fa_icon 'suitcase' %>
+      <%= @user.position %>
     </h5>
   <% end %>
+
+
+  <% if @user.affiliated_organization.present? %>
+    <h5>
+      <%= fa_icon 'fa-building-o' %>
+      <%= @user.affiliated_organization %>
+    </h5>
+  <% end %>
+
+
+
   <% if @user.location.present? %>
     <h5>
       <%= fa_icon 'map-marker' %>
       <%= @user.location %>
     </h5>
   <% end %>
-  <h5>
-    <i class="icon-record"></i> <%= pluralize(@user.points, 'point') %>
-  </h5>
-  <% if @user.badges.empty? %>
-    <h5>No badge yet.</h5>
-  <% else %>
-    <h5>
-      <% @user.badges.each do |badge| %>
-        <i class="<%= badge.custom_fields[:icon] %>" style="color: <%= badge.custom_fields[:color] %>">
-        </i>
-        <%= badge.name %>
-      <% end %>
-    </h5>
-  <% end %>
+
   <br>
   <div class="text-center">
     <% unless is_current_user?(@user) %>

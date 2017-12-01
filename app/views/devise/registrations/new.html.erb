@@ -18,6 +18,14 @@
         <%= f.email_field :email, class: 'form-control', placeholder: 'email@example.com' %>
       </div>
       <div class="form-group">
+        <%= f.label :position %>
+        <%= f.text_field :position, class: 'form-control', placeholder: 'Position (ex: Community Leader, Data Scientists, etc)' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :affiliated_organization %>
+        <%= f.text_field :affiliated_organization, class: 'form-control', placeholder: 'Affiliated Organization' %>
+      </div>
+      <div class="form-group">
         <%= f.label :password %>
         <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
