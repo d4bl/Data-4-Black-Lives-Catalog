@@ -27,6 +27,7 @@ h6 {
   padding: 13px;
 }
 
+
 @media screen and (max-width: 320px) {
   #navbar-subtitle { 
     font-size: 11px;
@@ -55,6 +56,11 @@ h6 {
   &:hover {
     color: $bg-color !important;
   };
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-family: 'Work Sans', monospace;
+  font-weight: 600;
 }
 
 .avatar {
