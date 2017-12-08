@@ -153,12 +153,12 @@ textarea {
 }
 
 .liked {
-  color: $liked-color !important;
+  color: $light-text-color !important;
 }
 
 .points span {
   padding: 5px;
-  background-color: $bg-color;
+  background-color: $liked-color;
   color: $light-text-color;
   display: inline-block;
   font-size: $small-font-size;
@@ -215,7 +215,7 @@ p {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover {
-  background: darken($button-color, 10%);
+  background: darken($button-color, 90%);
 }
 
 .dropdown-menu > li > a {
