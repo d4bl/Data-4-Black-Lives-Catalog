@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+  <div class="container white-background">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top">
         <span class="sr-only">Toggle navigation</span>
@@ -7,7 +7,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Data 4 Black Lives", root_url, class: "navbar-brand" %>
+        <div class="navbar-logo">
+          <%= link_to "Data 4 Black Lives", root_url, class: "navbar-brand" %>
+          <span id="navbar-subtitle">A Place for Data Scientists and Activists</span>
+        </div>
     </div>
     <div class="collapse navbar-collapse" id="navbar-top">
       <ul class="nav navbar-nav navbar-right">

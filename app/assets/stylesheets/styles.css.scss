@@ -1,10 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Space+Mono:700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700);
 
 body {
   padding-top: 100px;
-  background: $bg-color;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 h1,
@@ -21,14 +20,37 @@ h6 {
   background-color: $navbar-color;
 }
 
+.navbar-logo {
+  display: flex;
+  flex-direction:column;
+  height: 67px;
+  padding: 13px;
+}
+
+@media screen and (max-width: 320px) {
+  #navbar-subtitle { 
+    font-size: 11px;
+  }
+}
+
+
+.navbar-toggle {
+  height: 50px;
+}
+
+
 .navbar-brand {
   font-weight: 600;
+  margin: 0 !important;
+  padding: 0px;
+  margin: 0px 0px 5px 0px;
 }
 
 .navbar-brand,
 .navbar-default .navbar-nav > li > a {
-  font-family: 'Montserrat';
-  color: white !important;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  color: black !important;
 
   &:hover {
     color: $bg-color !important;
@@ -55,8 +77,6 @@ h6 {
 
 .activity {
   background: white;
-  border: 1px solid $border-color;
-  border-radius: 3px;
   padding: 10px;
   margin: 10px;
 }
@@ -79,12 +99,12 @@ h6 {
 }
 
 .btn {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   padding: 10px 20px;
 }
 
 .btn-primary {
-  background-color: $navbar-color;
+  background-color: $button-color;
 }
 
 .btn-sm {
@@ -157,7 +177,7 @@ textarea {
 
     a,
     button {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Work Sans', sans-serif;
       background-color: $border-color;
       color: #555;
 
@@ -189,13 +209,13 @@ p {
 }
 
 .atwho-view .cur {
-  background: $navbar-color;
+  background: $button-color;
 }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover {
-  background: darken($navbar-color, 10%);
+  background: darken($button-color, 10%);
 }
 
 .dropdown-menu > li > a {
