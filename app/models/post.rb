@@ -1,14 +1,10 @@
-
-
-
-
 class Post < ActiveRecord::Base
   include Shared::Callbacks
 
   belongs_to :user
   counter_culture :user
-  acts_as_votable
   acts_as_commentable
+  acts_as_taggable_on :tags
 
   include PublicActivity::Model
   tracked only: [:create, :like], owner: proc { |_controller, model| model.user }

@@ -18,6 +18,7 @@
 //= require moment.min
 //= require fullcalendar.min
 //= require jquery.datetimepicker
+//= require bootstrap-tagsinput
 //= require_tree .
 
 $(document).ready(function () {

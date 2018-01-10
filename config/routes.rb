@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :posts
+  resources :tags, only: [:index, :show]
   resources :comments, only: [:create, :destroy]
   devise_for :users
   resources :users do

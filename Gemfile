@@ -50,6 +50,8 @@ gem 'public_activity'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'acts_as_commentable'
 gem 'acts_as_follower'
+gem 'acts-as-taggable-on', '~> 4.0'
+gem 'bootstrap-tagsinput-rails'
 gem 'counter_culture', '~> 0.1.33'
 
 gem 'faker'

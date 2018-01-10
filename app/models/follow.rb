@@ -1,7 +1,3 @@
-
-
-
-
 class Follow < ActiveRecord::Base
   include Shared::Callbacks
 

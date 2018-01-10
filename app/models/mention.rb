@@ -1,7 +1,3 @@
-
-
-
-
 module Mention
 
 private
