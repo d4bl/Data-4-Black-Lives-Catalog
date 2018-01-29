@@ -1,3 +1,38 @@
 // Place all the styles related to the tags controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tag {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.content > .tag {
+  text-align: left !important;
+  margin-bottom: 35px;
+}
+
+.tag > a {
+  background: #000000;
+  border-radius: 100px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.label-info {
+  background-color: #000;
+  border-radius: 50px;
+}
+
+.tag-link {
+  background: #000000;
+  border-radius: 100px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 40px;
+}

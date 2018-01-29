@@ -53,19 +53,6 @@ ActiveRecord::Schema.define(version: 20180108213047) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "events", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "event_datetime"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "cached_votes_up", default: 0
-    t.integer  "comments_count",  default: 0
-    t.index ["cached_votes_up"], name: "index_events_on_cached_votes_up"
-    t.index ["comments_count"], name: "index_events_on_comments_count"
-    t.index ["user_id"], name: "index_events_on_user_id"
-  end
-
   create_table "follows", force: :cascade do |t|
     t.string   "followable_type",                 null: false
     t.integer  "followable_id",                   null: false

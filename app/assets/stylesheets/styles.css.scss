@@ -29,7 +29,7 @@ h6 {
 
 
 @media screen and (max-width: 320px) {
-  #navbar-subtitle { 
+  #navbar-subtitle {
     font-size: 11px;
   }
 }
@@ -90,7 +90,7 @@ h6 {
 .name {
   display: inline-block;
   font-size: $default-font-size;
-  margin-left: 10px;
+  margin: 0;
 }
 
 .action {
@@ -101,7 +101,6 @@ h6 {
 .created-at {
   color: $light-text-color;
   font-size: $small-font-size;
-  margin-top: 15px;
 }
 
 .btn {
@@ -135,6 +134,13 @@ textarea {
   &:focus {
     border: 2px solid #888 !important;
   };
+}
+
+.info {
+  display: flex;
+  a > .avatar {
+    margin-right: 10px;
+  }
 }
 
 [placeholder]:empty:before {
