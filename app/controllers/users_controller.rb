@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :about, :avatar, :cover, :position, :affiliated_organization, :location)
+    params.require(:user).permit(:name, :about, :avatar, :cover, :position, :affiliated_organization, :location, :linkedin)
   end
 
   def check_ownership

@@ -1,6 +1,14 @@
 <div class="row">
 
   <div id="newsfeed" class="col-lg-12">
+
+    <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: "col-sm-11" %>
+      <%= button_tag type: 'submit', class: "col-sm-1", id: "register-button" do %>
+        <i class="fa fa-search" aria-hidden="true"></i>
+      <% end %>
+    <% end %>
+
     <%= render 'posts/form' %>
     <br>
     <div id="activities">
@@ -12,7 +20,7 @@
         <%= render_activities(@activities, layout: '/shared/activity') %>
       <% end %>
     </div>
-    
+
   </div>
 
 </div>

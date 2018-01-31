@@ -1,0 +1,28 @@
+
+<% if @posts.present? %>
+  <% @posts.each do |post| %>
+    <div class="info">
+      <%= render 'shared/avatar', user: post.user %>
+      <div>
+        <h4 class="name"><%= link_to "#{post.user.name} (#{post.user.position})", user_path(post.user) %></h4><br />
+        <%= render 'shared/created_at', activity: post %>
+      </div>
+    </div>
+    <div class="content">
+      <span class="text"><%= post.content_html %></span>
+      <%= link_to "Link to dataset on Google Sheets", "#{post.data_set}" %><br />
+      <div class="tag">
+        <% post.tags.each do |tag| %>
+          <%= link_to "##{tag.name}", tag_path(tag.id) %>
+        <% end %>
+      </div>
+      <div class="points">
+        <span class="like-count"><%= pluralize(post.cached_votes_up, 'like') %></span>
+        <span class="comments-count"><%= pluralize(post.comments_count, 'comment') %></span>
+      </div>
+    </div>
+    <%= render 'shared/actions', resource: post %>
+  <% end %>
+<% else %>
+  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>

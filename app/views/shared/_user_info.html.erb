@@ -41,6 +41,9 @@
     <% unless is_current_user?(@user) %>
       <%= render 'follows/form', user: @user %>
       <h6><%= 'Follows you' if current_user.followed_by?(@user) %></h6>
+      <% if current_user.followed_by?(@user) and @user.followed_by?(current_user) and @user.linkedin.present? %>
+        <%= link_to "LinkedIn", "#{@user.linkedin}" %>
+      <% end %>
     <% end %>
   </div>
 </div>
